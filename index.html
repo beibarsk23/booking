@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бронирование — Уютное кафе</title>
+</head>
+<body>
+  <header>
+    <h1>Уютное кафе</h1>
+  </header>
+
+  <main>
+    <h2>Бронирование столика</h2>
+    <p>Поля со звёздочкой обязательны для заполнения.</p>
+
+    <form>
+        <p>
+          <label for="name">Имя *</label>
+          <input type="text" id="name" required>
+        </p>
+
+        <p>
+          <label for="phone">Телефон *</label>
+          <input type="tel" id="phone" required>
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </p>
+
+        <legend>Детали бронирования</legend>
+
+        <p>
+          <label for="date">Дата *</label>
+          <input type="date" id="date" required>
+        </p>
+
+        <p>
+          <label for="time">Время *</label>
+          <input type="time" id="time" required>
+        </p>
+
+        <p>
+          <label for="guests">Количество гостей (от 1 до 10)</label>
+          <input type="number" id="guests" name="guests"
+                 min="1" max="10" step="1" value="1">
+        </p>
+
+        <p>
+          <label for="occasion">Повод</label>
+          <select id="occasion" name="occasion">
+            <option value="dinner">Просто поужинать</option>
+            <option value="birthday">День рождения</option>
+            <option value="business">Деловая встреча</option>
+            <option value="date">Свидание</option>
+          </select>
+        </p>
+
+        <legend>Где сидеть</legend>
+
+        <p>
+          <input type="radio" id="hall" name="seating"
+                 value="hall" checked>
+          <label for="hall">Зал</label>
+        </p>
+
+        <p>
+          <input type="radio" id="terrace" name="seating"
+                 value="terrace">
+          <label for="terrace">Терраса</label>
+        </p>
+
+        <p>
+          <input type="radio" id="vip" name="seating" value="vip">
+          <label for="vip">VIP-комната</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Пожелания</legend>
+
+        <p>
+          <input type="checkbox" id="highchair" name="wishes"
+                 value="highchair">
+          <label for="highchair">Детский стульчик</label>
+        </p>
+
+        <p>
+          <input type="checkbox" id="window" name="wishes"
+                 value="window">
+          <label for="window">Столик у окна</label>
+        </p>
+
+        <p>
+          <input type="checkbox" id="cake" name="wishes"
+                 value="cake">
+          <label for="cake">Торт от кафе</label>
+        </p>
+
+        <p>
+          <label for="comment">Комментарий</label>
+          <br>
+          <textarea id="comment" name="comment"
+                    rows="5" cols="40"></textarea>
+        </p>
+      </fieldset>
+
+      <p>
+        <input type="checkbox" id="agreement" name="agreement"
+               value="accepted" required>
+        <label for="agreement">Согласен с правилами кафе *</label>
+      </p>
+
+      <!-- Учебная кнопка: не отправляет форму. -->
+      <button type="button">Забронировать</button>
+    </form>
+  </main>
+
+  <footer>Beibars</footer>
+</body>
+</html>
